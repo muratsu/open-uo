@@ -377,27 +377,32 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Tao.Sdl">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MSBuild\..\MonoGame\v3.0\Assemblies\WindowsGL\Tao.Sdl.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tao.Sdl">
+      <HintPath>.\Tao.Sdl.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\..\..\..\Program Files %28x86%29\MonoGame\v3.0\Assemblies\WindowsGL\SDL.dll">
-      <Link>SDL.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\pfx\textures\rain.png" />
     <Content Include="Content\Shaders\IsometricWorld.fx" />
     <Content Include="Content\Shaders\ParticleEffect.fx" />
     <Content Include="Content\Shaders\VectorRenderer.fx" />
-    <Content Include="MonoGame.Framework.dll" />
-    <Content Include="OpenTK.dll" />
+    <Content Include="MonoGame.Framework.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OpenTK.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Shaders\IsometricWorld.fx" />
     <Content Include="Shaders\ParticleEffect.fx" />
     <Content Include="Shaders\VectorRenderer.fx" />
-    <Content Include="zlib32.dll" />
+    <Content Include="zlib32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

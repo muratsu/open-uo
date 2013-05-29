@@ -368,7 +368,7 @@ namespace OpenUO.GUI
                 return;
 
 #if DEBUG
-            // DrawBounds(spriteBatch);
+            //DrawBounds(spriteBatch, Color.Red);
 #endif
         
             foreach (Control c in Controls)

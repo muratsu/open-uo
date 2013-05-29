@@ -384,10 +384,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\pfx\textures\rain.png" />
-    <Content Include="Content\Shaders\IsometricWorld.fx" />
-    <Content Include="Content\Shaders\ParticleEffect.fx" />
-    <Content Include="Content\Shaders\VectorRenderer.fx" />
     <Content Include="MonoGame.Framework.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -405,9 +401,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="Content\pfx\scripts\foobert.lua" />
-    <None Include="Content\UltimaXNAContent.contentproj" />
     <None Include="Docs\C# Naming Conventions and Standards.docx" />
   </ItemGroup>
   <ItemGroup>
@@ -440,8 +433,6 @@
     <EmbeddedResource Include="Shaders\IsometricWorld.mgfxo" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\bin\x86\Debug\" />
-    <Folder Include="Content\obj\x86\Debug\TempPE\" />
     <Folder Include="Depends\" />
     <Folder Include="Network\Packets\Both\" />
   </ItemGroup>

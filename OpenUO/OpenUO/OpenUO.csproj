@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB8BD4AA-8EB9-49F8-A545-31B481C66BA2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenUO</RootNamespace>
+    <AssemblyName>OpenUO</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsGL\Debug\</OutputPath>
+    <DefineConstants>DEBUG;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core\BaseEngine.cs" />
+    <Compile Include="Core\Diagnostics\Dynamic.cs" />
+    <Compile Include="Core\Diagnostics\Logger.cs" />
+    <Compile Include="Core\Diagnostics\StatusLevel.cs" />
+    <Compile Include="Core\Diagnostics\StatusUpdateEventArgs.cs" />
+    <Compile Include="Core\Graphics\SpriteBatch3D.cs" />
+    <Compile Include="Core\Graphics\SpriteBatchUI.cs" />
+    <Compile Include="Core\Graphics\VectorPolygon.cs" />
+    <Compile Include="Core\Graphics\VectorRenderer.cs" />
+    <Compile Include="Core\Graphics\VertexPositionNormalTextureHue.cs" />
+    <Compile Include="Core\GUIState.cs" />
+    <Compile Include="Core\GUI\Control.cs" />
+    <Compile Include="Core\GUI\DragWidget.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLEnums.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLImages.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParser.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParserAtoms.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParsing\DynaString.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParsing\FastHash.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParsing\HTMLchunk.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParsing\HTMLentities.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParsing\HTMLheuristics.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParsing\HTMLParser.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLParsing\TagParser.cs" />
+    <Compile Include="Core\GUI\HTML\HTMLRegions.cs" />
+    <Compile Include="Core\GUI\Sprite.cs" />
+    <Compile Include="Core\GUI\TextRenderer.cs" />
+    <Compile Include="Core\InputState.cs" />
+    <Compile Include="Core\Input\Enums.cs" />
+    <Compile Include="Core\Input\EventArgs.cs" />
+    <Compile Include="Core\Input\EventArgsKeyboard.cs" />
+    <Compile Include="Core\Input\EventArgsMouse.cs" />
+    <Compile Include="Core\Input\InputEvent.cs" />
+    <Compile Include="Core\Input\InputEventKB.cs" />
+    <Compile Include="Core\Input\InputEventM.cs" />
+    <Compile Include="Core\Input\Message.cs" />
+    <Compile Include="Core\Input\MessageHook.cs" />
+    <Compile Include="Core\Input\NativeMethods.cs" />
+    <Compile Include="Core\Input\WndProc.cs" />
+    <Compile Include="Core\Pair.cs" />
+    <Compile Include="Core\Point.cs" />
+    <Compile Include="Core\Program.cs" />
+    <Compile Include="Entities.cs" />
+    <Compile Include="Entity\BaseEntity.cs" />
+    <Compile Include="Entity\Container.cs" />
+    <Compile Include="Entity\ContainerContents.cs" />
+    <Compile Include="Entity\ContainerItem.cs" />
+    <Compile Include="Entity\Corpse.cs" />
+    <Compile Include="Entity\DynamicObject.cs" />
+    <Compile Include="Entity\EntityPosition3d.cs" />
+    <Compile Include="Entity\Item.cs" />
+    <Compile Include="Entity\Mobile.cs" />
+    <Compile Include="Entity\MobileAnimation.cs" />
+    <Compile Include="Entity\MobileEquipment.cs" />
+    <Compile Include="Entity\Movement.cs" />
+    <Compile Include="Entity\MovementCheck.cs" />
+    <Compile Include="Entity\Multi.cs" />
+    <Compile Include="Entity\Overhead.cs" />
+    <Compile Include="Entity\PlayerMobile.cs" />
+    <Compile Include="Entity\PropertyList.cs" />
+    <Compile Include="Entity\Serial.cs" />
+    <Compile Include="Entity\Shared.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="IsometricRenderer.cs" />
+    <Compile Include="Network\ClientNetwork.cs" />
+    <Compile Include="Network\Compression\HuffmanDecompression.cs" />
+    <Compile Include="Network\Compression\ZlibDecompression.cs" />
+    <Compile Include="Network\ContextMenu.cs" />
+    <Compile Include="Network\Interfaces\IDecompression.cs" />
+    <Compile Include="Network\Interfaces\IRecvPacket.cs" />
+    <Compile Include="Network\Interfaces\ISendPacket.cs" />
+    <Compile Include="Network\IO\PacketReader.cs" />
+    <Compile Include="Network\IO\PacketWriter.cs" />
+    <Compile Include="Network\NetworkException.cs" />
+    <Compile Include="Network\PacketHandler.cs" />
+    <Compile Include="Network\PacketRegistry.cs" />
+    <Compile Include="Network\Packets\Client\AsciiSpeechPacket.cs" />
+    <Compile Include="Network\Packets\Client\AttackRequestPacket.cs" />
+    <Compile Include="Network\Packets\Client\BuyItemsPacket.cs" />
+    <Compile Include="Network\Packets\Client\ClientVersionPacket.cs" />
+    <Compile Include="Network\Packets\Client\CreateCharacterPacket.cs" />
+    <Compile Include="Network\Packets\Client\DeleteCharacterPacket.cs" />
+    <Compile Include="Network\Packets\Client\DisconnectNotificationPacket.cs" />
+    <Compile Include="Network\Packets\Client\DoubleClickPacket.cs" />
+    <Compile Include="Network\Packets\Client\DropItemPacket.cs" />
+    <Compile Include="Network\Packets\Client\DropToLayerPacket.cs" />
+    <Compile Include="Network\Packets\Client\GameLoginPacket.cs" />
+    <Compile Include="Network\Packets\Client\GeneralInformationPackets.cs" />
+    <Compile Include="Network\Packets\Client\GetPlayerStatusPacket.cs" />
+    <Compile Include="Network\Packets\Client\GumpMenuSelectPacket.cs" />
+    <Compile Include="Network\Packets\Client\GumpTextEntryDialogReplyPacket.cs" />
+    <Compile Include="Network\Packets\Client\LoginCharacterPacket.cs" />
+    <Compile Include="Network\Packets\Client\LoginPacket.cs" />
+    <Compile Include="Network\Packets\Client\MoveRequestPacket.cs" />
+    <Compile Include="Network\Packets\Client\PathfindingPacket.cs" />
+    <Compile Include="Network\Packets\Client\PickupItemPacket.cs" />
+    <Compile Include="Network\Packets\Client\QueryPropertiesPacket.cs" />
+    <Compile Include="Network\Packets\Client\RenameCharacterPacket.cs" />
+    <Compile Include="Network\Packets\Client\RequestHelpPacket.cs" />
+    <Compile Include="Network\Packets\Client\RequestNamePacket.cs" />
+    <Compile Include="Network\Packets\Client\RequestNoticePacket.cs" />
+    <Compile Include="Network\Packets\Client\RequestSkillUsePacket.cs" />
+    <Compile Include="Network\Packets\Client\RequestTipPacket.cs" />
+    <Compile Include="Network\Packets\Client\RequestWarModePacket.cs" />
+    <Compile Include="Network\Packets\Client\ResponseToDialogBoxPacket.cs" />
+    <Compile Include="Network\Packets\Client\SeedPacket.cs" />
+    <Compile Include="Network\Packets\Client\SelectServerPacket.cs" />
+    <Compile Include="Network\Packets\Client\SellListReplyPacket.cs" />
+    <Compile Include="Network\Packets\Client\SingleClickPacket.cs" />
+    <Compile Include="Network\Packets\Client\TalkRequestPacket.cs" />
+    <Compile Include="Network\Packets\Client\TargetCancelPacket.cs" />
+    <Compile Include="Network\Packets\Client\TargetObjectPacket.cs" />
+    <Compile Include="Network\Packets\Client\TargetXYZPacket.cs" />
+    <Compile Include="Network\Packets\Client\UnicodeSpeechPacket.cs" />
+    <Compile Include="Network\Packets\Client\UOGInfoRequestPacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\DisplayGumpFastPacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\DisplayMenuPacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\Extended0x78Packet.cs" />
+    <Compile Include="Network\Packets\Incomplete\InvalidMapEnablePacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\ObjectHelpResponsePacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\OpenPaperdollPacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\QuestArrowPacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\ResurrectionMenuPacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\TipNoticeWindowPacket.cs" />
+    <Compile Include="Network\Packets\Incomplete\VendorSellListPacket.cs" />
+    <Compile Include="Network\Packets\RevcPacket.cs" />
+    <Compile Include="Network\Packets\SendPacket.cs" />
+    <Compile Include="Network\Packets\SendRecvPacket.cs" />
+    <Compile Include="Network\Packets\Server\AsciiMessagePacket.cs" />
+    <Compile Include="Network\Packets\Server\ChangeCombatantPacket.cs" />
+    <Compile Include="Network\Packets\Server\CharacterCityListPacket.cs" />
+    <Compile Include="Network\Packets\Server\CharacterListUpdatePacket.cs" />
+    <Compile Include="Network\Packets\Server\ChatPacket.cs" />
+    <Compile Include="Network\Packets\Server\CompressedGumpPacket.cs" />
+    <Compile Include="Network\Packets\Server\ContainerContentPacket.cs" />
+    <Compile Include="Network\Packets\Server\ContainerContentUpdatePacket.cs" />
+    <Compile Include="Network\Packets\Server\ContainerPacket.cs" />
+    <Compile Include="Network\Packets\Server\CorpseClothingPacket.cs" />
+    <Compile Include="Network\Packets\Server\CustomHousePacket.cs" />
+    <Compile Include="Network\Packets\Server\DamagePacket.cs" />
+    <Compile Include="Network\Packets\Server\DeathAnimationPacket.cs" />
+    <Compile Include="Network\Packets\Server\DeleteResultPacket.cs" />
+    <Compile Include="Network\Packets\Server\DragEffectPacket.cs" />
+    <Compile Include="Network\Packets\Server\EquipmentEntry.cs" />
+    <Compile Include="Network\Packets\Server\GeneralInfoPacket.cs" />
+    <Compile Include="Network\Packets\Server\GlobalQueueCountPacket.cs" />
+    <Compile Include="Network\Packets\Server\GraphicEffectPacket.cs" />
+    <Compile Include="Network\Packets\Server\LiftRejectionPacket.cs" />
+    <Compile Include="Network\Packets\Server\LoginCompletePacket.cs" />
+    <Compile Include="Network\Packets\Server\LoginConfirmPacket.cs" />
+    <Compile Include="Network\Packets\Server\LoginRejectionPacket.cs" />
+    <Compile Include="Network\Packets\Server\MessageLocalizedAffixPacket.cs" />
+    <Compile Include="Network\Packets\Server\MessageLocalizedPacket.cs" />
+    <Compile Include="Network\Packets\Server\MobileAnimationPacket.cs" />
+    <Compile Include="Network\Packets\Server\MobileAttributesPacket.cs" />
+    <Compile Include="Network\Packets\Server\MobileIncomingPacket.cs" />
+    <Compile Include="Network\Packets\Server\MobileMovingPacket.cs" />
+    <Compile Include="Network\Packets\Server\MobileUpdatePacket.cs" />
+    <Compile Include="Network\Packets\Server\MoveAcknowledgePacket.cs" />
+    <Compile Include="Network\Packets\Server\MovementRejectPacket.cs" />
+    <Compile Include="Network\Packets\Server\ObjectInfoPacket.cs" />
+    <Compile Include="Network\Packets\Server\ObjectPropertyListPacket.cs" />
+    <Compile Include="Network\Packets\Server\ObjectPropertyListUpdatePacket.cs" />
+    <Compile Include="Network\Packets\Server\OpenWebBrowserPacket.cs" />
+    <Compile Include="Network\Packets\Server\OverallLightLevelPacket.cs" />
+    <Compile Include="Network\Packets\Server\PersonalLightLevelPacket.cs" />
+    <Compile Include="Network\Packets\Server\PlayerMovePacket.cs" />
+    <Compile Include="Network\Packets\Server\PlayMusicPacket.cs" />
+    <Compile Include="Network\Packets\Server\PlaySoundEffectPacket.cs" />
+    <Compile Include="Network\Packets\Server\PopupMessagePacket.cs" />
+    <Compile Include="Network\Packets\Server\RemoveEntityPacket.cs" />
+    <Compile Include="Network\Packets\Server\RequestNameResponsePacket.cs" />
+    <Compile Include="Network\Packets\Server\SeasonChangePacket.cs" />
+    <Compile Include="Network\Packets\Server\SendSkillsPacket.cs" />
+    <Compile Include="Network\Packets\Server\ServerListPacket.cs" />
+    <Compile Include="Network\Packets\Server\ServerRelayPacket.cs" />
+    <Compile Include="Network\Packets\Server\StatusInfoPacket.cs" />
+    <Compile Include="Network\Packets\Server\SubServerPacket.cs" />
+    <Compile Include="Network\Packets\Server\SupportedFeaturesPacket.cs" />
+    <Compile Include="Network\Packets\Server\SwingPacket.cs" />
+    <Compile Include="Network\Packets\Server\TargetCursorMulti.cs" />
+    <Compile Include="Network\Packets\Server\TargetCursorPacket.cs" />
+    <Compile Include="Network\Packets\Server\TimePacket.cs" />
+    <Compile Include="Network\Packets\Server\UnicodeMessagePacket.cs" />
+    <Compile Include="Network\Packets\Server\UOGInfoResponsePacket.cs" />
+    <Compile Include="Network\Packets\Server\UpdateHealthPacket.cs" />
+    <Compile Include="Network\Packets\Server\UpdateManaPacket.cs" />
+    <Compile Include="Network\Packets\Server\UpdateStaminaPacket.cs" />
+    <Compile Include="Network\Packets\Server\VendorBuyListPacket.cs" />
+    <Compile Include="Network\Packets\Server\VersionRequestPacket.cs" />
+    <Compile Include="Network\Packets\Server\WarModePacket.cs" />
+    <Compile Include="Network\Packets\Server\WeatherPacket.cs" />
+    <Compile Include="Network\Packets\Server\WornItemPacket.cs" />
+    <Compile Include="Network\QueuedPacket.cs" />
+    <Compile Include="Network\Shared.cs" />
+    <Compile Include="Network\SocketState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SceneManager.cs" />
+    <Compile Include="Scene\BaseScene.cs" />
+    <Compile Include="Scene\CharacterListScene.cs" />
+    <Compile Include="Scene\CreateCharacterScene.cs" />
+    <Compile Include="Scene\LoggingInScene.cs" />
+    <Compile Include="Scene\LoginScene.cs" />
+    <Compile Include="Scene\SelectServerScene.cs" />
+    <Compile Include="Scene\WorldScene.cs" />
+    <Compile Include="TileEngine\Map\Map.cs" />
+    <Compile Include="TileEngine\Map\MapTile.cs" />
+    <Compile Include="TileEngine\MiniMap.cs" />
+    <Compile Include="TileEngine\MouseOverList.cs" />
+    <Compile Include="TileEngine\Objects\MapObject.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectComparer.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectCorpse.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectDeferred.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectDynamic.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectGround.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectItem.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectMobile.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectPrerendered.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectStatic.cs" />
+    <Compile Include="TileEngine\Objects\MapObjectText.cs" />
+    <Compile Include="TileEngine\Shared.cs" />
+    <Compile Include="UltimaClient.cs" />
+    <Compile Include="UltimaData\Animations.cs" />
+    <Compile Include="UltimaData\Art.cs" />
+    <Compile Include="UltimaData\ASCIIFont.cs" />
+    <Compile Include="UltimaData\BitStream.cs" />
+    <Compile Include="UltimaData\ContainerData.cs" />
+    <Compile Include="UltimaData\CustomHouses.cs" />
+    <Compile Include="UltimaData\CustomHousing.cs" />
+    <Compile Include="UltimaData\Enums.cs" />
+    <Compile Include="UltimaData\FileIndex.cs" />
+    <Compile Include="UltimaData\FileIndexClint.cs" />
+    <Compile Include="UltimaData\FileManager.cs" />
+    <Compile Include="UltimaData\Gumps.cs" />
+    <Compile Include="UltimaData\HairStyles.cs" />
+    <Compile Include="UltimaData\Hues.cs" />
+    <Compile Include="UltimaData\Mobtypes.cs" />
+    <Compile Include="UltimaData\Multis.cs" />
+    <Compile Include="UltimaData\Music.cs" />
+    <Compile Include="UltimaData\ParticleData.cs" />
+    <Compile Include="UltimaData\Radarcol.cs" />
+    <Compile Include="UltimaData\SharedMethods.cs" />
+    <Compile Include="UltimaData\Skills.cs" />
+    <Compile Include="UltimaData\Sound.cs" />
+    <Compile Include="UltimaData\Speech.cs" />
+    <Compile Include="UltimaData\StaticTileList.cs" />
+    <Compile Include="UltimaData\StringList.cs" />
+    <Compile Include="UltimaData\Texmaps.cs" />
+    <Compile Include="UltimaData\TileData.cs" />
+    <Compile Include="UltimaData\TileMatrix.cs" />
+    <Compile Include="UltimaData\TileMatrixPatch.cs" />
+    <Compile Include="UltimaData\TileMatrixRaw.cs" />
+    <Compile Include="UltimaData\UniFonts.cs" />
+    <Compile Include="UltimaData\Verdata.cs" />
+    <Compile Include="UltimaEngine.cs" />
+    <Compile Include="UltimaGUIState.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\CharacterListGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\ChatWindow.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\ContainerGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\CreateCharAppearanceGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\CreateCharSkillsGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\DebugGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\LoggingInGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\LoginGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\MiniMap.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\PaperDollGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\SelectServerGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\SkillsGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\StatusGump.cs" />
+    <Compile Include="UltimaGUI\ClientsideGumps\TopMenu.cs" />
+    <Compile Include="UltimaGUI\Controls\Button.cs" />
+    <Compile Include="UltimaGUI\Controls\CheckerTrans.cs" />
+    <Compile Include="UltimaGUI\Controls\ColorPicker.cs" />
+    <Compile Include="UltimaGUI\Controls\CroppedText.cs" />
+    <Compile Include="UltimaGUI\Controls\DropDownList.cs" />
+    <Compile Include="UltimaGUI\Controls\ExpandableScroll.cs" />
+    <Compile Include="UltimaGUI\Controls\GumpPic.cs" />
+    <Compile Include="UltimaGUI\Controls\GumpPicContainer.cs" />
+    <Compile Include="UltimaGUI\Controls\GumpPicTiled.cs" />
+    <Compile Include="UltimaGUI\Controls\HtmlGump.cs" />
+    <Compile Include="UltimaGUI\Controls\ItemGumpling.cs" />
+    <Compile Include="UltimaGUI\Controls\ItemGumplingPaperdoll.cs" />
+    <Compile Include="UltimaGUI\Controls\PaperDollInteractable.cs" />
+    <Compile Include="UltimaGUI\Controls\PaperdollLargeUninteractable.cs" />
+    <Compile Include="UltimaGUI\Controls\ResizePic.cs" />
+    <Compile Include="UltimaGUI\Controls\ScrollBar.cs" />
+    <Compile Include="UltimaGUI\Controls\Slider.cs" />
+    <Compile Include="UltimaGUI\Controls\TextEntry.cs" />
+    <Compile Include="UltimaGUI\Controls\TextLabel.cs" />
+    <Compile Include="UltimaGUI\Controls\TextLabelAscii.cs" />
+    <Compile Include="UltimaGUI\Controls\TextLabelAsciiCropped.cs" />
+    <Compile Include="UltimaGUI\Controls\TextureGumpling.cs" />
+    <Compile Include="UltimaGUI\Controls\TilePic.cs" />
+    <Compile Include="UltimaGUI\DropWidget.cs" />
+    <Compile Include="UltimaGUI\Gump.cs" />
+    <Compile Include="UltimaGUI\MsgBox.cs" />
+    <Compile Include="UltimaGUI\UltimaCursor.cs" />
+    <Compile Include="UltimaInteraction.cs" />
+    <Compile Include="UltimaVars\Characters.cs" />
+    <Compile Include="UltimaVars\DebugVars.cs" />
+    <Compile Include="UltimaVars\EngineVars.cs" />
+    <Compile Include="UltimaVars\Features.cs" />
+    <Compile Include="UltimaVars\Metrics.cs" />
+    <Compile Include="UltimaVars\Servers.cs" />
+    <Compile Include="UltimaVars\Skills.cs" />
+    <Compile Include="UltimaVars\Status.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Lidgren.Network, Version=2011.3.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tao.Sdl">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MSBuild\..\MonoGame\v3.0\Assemblies\WindowsGL\Tao.Sdl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\..\..\..\Program Files %28x86%29\MonoGame\v3.0\Assemblies\WindowsGL\SDL.dll">
+      <Link>SDL.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\pfx\textures\rain.png" />
+    <Content Include="Content\Shaders\IsometricWorld.fx" />
+    <Content Include="Content\Shaders\ParticleEffect.fx" />
+    <Content Include="Content\Shaders\VectorRenderer.fx" />
+    <Content Include="MonoGame.Framework.dll" />
+    <Content Include="OpenTK.dll" />
+    <Content Include="Shaders\IsometricWorld.fx" />
+    <Content Include="Shaders\ParticleEffect.fx" />
+    <Content Include="Shaders\VectorRenderer.fx" />
+    <Content Include="zlib32.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Content\pfx\scripts\foobert.lua" />
+    <None Include="Content\UltimaXNAContent.contentproj" />
+    <None Include="Docs\C# Naming Conventions and Standards.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Shaders\ParticleEffect.mgfxo" />
+    <EmbeddedResource Include="Shaders\VectorRenderer.mgfxo" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Shaders\IsometricWorld.mgfxo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\bin\x86\Debug\" />
+    <Folder Include="Content\obj\x86\Debug\TempPE\" />
+    <Folder Include="Depends\" />
+    <Folder Include="Network\Packets\Both\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
